@@ -15,6 +15,7 @@ Martha, a senior manager for the Advisory Services Team at Accountability Accoun
 - Plotly Express
 - hvPlot 0.0.8
 - Pandas
+- Dataset from [CryptoCompare](https://min-api.cryptocompare.com/data/all/coinlist)
 
 ## Results
 
@@ -51,8 +52,7 @@ Martha, a senior manager for the Advisory Services Team at Accountability Accoun
 <img src="Images/clustered_df.png" width="500"/>
 
 ### Visualizing Cryptocurrencies Results
-- The distinct groups that correspond to the three principal components are plotted in a 3D scatter plot for visualization. There are three major clusters and fourth cluster has only one data point. This implies that KMeans segregated an extreme value in its own cluster to reduce variance.
-- KMeans algorithm is sensitive to outliers. Removing outliers in data and then clustering may produce better results.
+- The distinct groups that correspond to the three principal components are plotted in a 3D scatter plot for visualization. There are three major clusters and fourth cluster has only one data point. This implies that KMeans algorithm segregated an extreme value in its own cluster to reduce variance. Since KMeans algorithm is sensitive to outliers, removing outliers in data and then clustering may produce better results.
 <img src="Images/scatter_plot.png" width="500"/>
 
 - With the clusters generated, the data is presented in a table using hvPlot. There are 532 tradable cryptocurrencies.
@@ -63,9 +63,8 @@ Martha, a senior manager for the Advisory Services Team at Accountability Accoun
 
 ## Summary
 Employing unsupervised machine learning models to discover patterns in crypto data is the way to go. The analysis is successful in grouping the data into four clusters. However, inorder to create a crypto investment portfolio, the below points should considered for further analysis:
-- PCA generated a low explained variance, which can tell that a variable of significant effect has been omitted from the noise reduction procedure. Since variability is too low, increasing the number of components as input for PCA may be considered to produce a robust scheme for groups.
-- The KMeans algorithm assigned a single element to a single cluster. It may imply the cryptocurrency dataset has some dirty data. Checking for and removing outliers in data and then clustering may produce better results. Alternatively, if the data does not show many outliers, another algorithm can be used instead of KMeans for clustering.
-- Similarly, plotting the clustered cryptos by total supply and mined coins shows two outliers. This strongly suggests the need to clean data and run the models.
+- PCA generated a low explained variance (6.98%), which can tell that a variable of significant effect has been omitted from the noise reduction procedure. An increase in the number of components as input to PCA may be considered to produce a robust scheme for groups.
+- The KMeans algorithm assigned a single element to a single cluster. It may imply the cryptocurrency dataset has some dirty data. Checking for and removing outliers in data and then clustering may produce better results. Alternatively, if the data does not show many outliers, another algorithm instead of KMeans can be used for clustering. Similarly, plotting the clustered cryptos by total supply and mined coins shows two outliers. This strongly suggests the need to clean data and run the models.
 
 ### References
 Thomas A. Runkler, Data Analytics - Models and Algorithms for Intelligent Data Analysis, 2nd Edition
