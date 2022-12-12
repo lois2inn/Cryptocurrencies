@@ -53,14 +53,13 @@ Martha, a senior manager for the Advisory Services Team at Accountability Accoun
 
 ### Visualizing Cryptocurrencies Results
 - The distinct groups that correspond to the three principal components are plotted in a 3D scatter plot for visualization. There are three major groups and one outlier.
+- KMeans algorithm is sensitive to outliers. Removing these outliers and clustering may produce better results.
 <img src="Images/scatter_plot.png" width="500"/>
 
 - With the clusters generated, the data is presented in a table using hvPlot. There are 532 tradable cryptocurrencies.
 <img src="Images/cluster_table.png" width="500"/>
 
-- The TotalCoinSupply and TotalCoinsMined columns are scaled between the given range of zero and one. The scaled data is added to the clustered data to create a scatter plot. Two outliers can be observed.
+- The TotalCoinSupply and TotalCoinsMined columns are scaled between the given range of zero and one. The scaled data is added to the clustered data to create a scatter plot. Two outliers can be observed. 
+
 <img src="Images/coin_supply_mined.png" width="500"/>
 
-## Summary
-
--eigen values
