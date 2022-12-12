@@ -44,7 +44,7 @@ Martha, a senior manager for the Advisory Services Team at Accountability Accoun
 <img src="Images/explained_variance.png" width="700"/>
 
 ### Clustering Crytocurrencies Using K-Means
-- To determine the best value for K, Elbow curve is plotted. The curve shows 4 at the elbow. This is the number of clusters that was used for the KMeans algorithm.
+- To determine the best value for K, Elbow curve is plotted. The curve shows 4 at the elbow. This is the number of clusters that is used for the KMeans algorithm.
 <img src="Images/elbow_curve.png" width="500"/>
 
 - Upon fitting data to K-Means model, the resultant dataframe looks like below:
@@ -53,6 +53,12 @@ Martha, a senior manager for the Advisory Services Team at Accountability Accoun
 ### Visualizing Cryptocurrencies Results
 - The distinct groups that correspond to the three principal components are plotted in a 3D scatter plot for visualization.
 <img src="Images/scatter_plot.png" width="500"/>
+
+- With the clusters generated, the data is presented in a table using hvPlot. There are 532 tradable cryptocurrencies.
+<img src="Images/cluster_table.png" width="500"/>
+
+- The TotalCoinSupply and TotalCoinsMined columns are scaled between the given range of zero and one. The scaled data is added to the clustered data to create a scatter plot as below:
+<img src="Images/coin_supply_mined.png" width="500"/>
 
 ## Summary
 
